@@ -1,0 +1,25 @@
+{
+  "name": "weddingapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "repository": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "build"
+  },
+  "dependencies": {
+    "csv": "^2.0.0",
+    "jquery": "^3.3.1",
+    "npm": "^5.7.1",
+    "webcamjs": "^1.0.24"
+  },
+  "devDependencies": {
+    "electron": "^1.4.10",
+    "electron-builder": "^10.8.1"
+  }
+}

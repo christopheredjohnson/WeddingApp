@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <img src="assets/imgs/header_bg.png" alt="" class="feather">
+    <div class="pageWrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="header">Welcome to the Wedding of <br> Courtney &amp; Frank</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" id="guestFeedContainer">
+          <table border="0" id="table_scroll">
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="col-lg-8 camFeed">
+          <div id="cam" style="margin: 0 auto;"></div>
+          <div class="camInstructions">
+            <p>To take a picture, please press the center button of the remote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

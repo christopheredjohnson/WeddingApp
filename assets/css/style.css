@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('./GreatVibes.ttf') format('truetype');
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+#guestFeedContainer {
+  margin: 103px auto;
+  font-size: 32px;
+  text-align: center;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display:  none;
+}
+
+#table_scroll{
+  width:100%;
+  list-style-type: none;
+}
+
+#table_scroll tr {
+  height: 60px;
+}
+
+body {
+  font-family: GreatVibes;
+  background: #FFFFF2;
+}
+
+.feather {
+  position: absolute;
+  bottom: 60px;
+  left: 150px;
+}
+
+.camInstructions {
+    text-align: center;
+    font-size: 35px;
+    color: #222;
+}
+
+.header {
+  color: #222;
+  text-align:  left;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0;
+}
