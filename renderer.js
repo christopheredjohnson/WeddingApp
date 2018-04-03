@@ -4,7 +4,9 @@
 const fs = require('fs');
 const WebCamera = require("webcamjs");
 const $ = require('jquery');
+const path = require('path');
 const csv = require('csv');
+const url = require('url')
 const parser = csv.parse();
 const stringify = csv.stringify();
 let my_time;
@@ -21,23 +23,26 @@ window.addEventListener('keydown', e => {
 });
 
 window.addEventListener('load', event => {
-	fs.readFile('assets/Guests.csv', function read(err, data) {
-		if (err) {
-			throw err;
-		}
-		csv.parse(data, {header: true, column: { FirstName: 'FirstName', LastName: 'LastName', TableNumber: 'TableNumber' }}, (err, output) => {
-			if(err) {
-				console.log(err);
+	fs.readFile(
+		path.join(__dirname, 'assets/Guests.csv'), 
+		function read(err, data) {
+			if (err) {
+				throw err;
 			}
-			output.forEach(function(value, index) {
-				if(index !== 0) { // not header
-					$('#table_scroll > tbody').append($('<tr/>').text(value[0] + " " + value[1] + ' - Table: #' + value[2]));
+			csv.parse(data, {header: true, column: { FirstName: 'FirstName', LastName: 'LastName', TableNumber: 'TableNumber' }}, (err, output) => {
+				if(err) {
+					console.log(err);
 				}
-			});   
+				output.forEach(function(value, index) {
+					if(index !== 0) { // not header
+						$('#table_scroll > tbody').append($('<tr/>').text(value[0] + " " + value[1] + ' - Table: #' + value[2]));
+					}
+				});   
 
-			scrollDiv_init();   
-		});
-	});
+				scrollDiv_init();   
+			});
+		}
+	);
 
 	WebCamera.set({
 		width: 1080,
