@@ -8,34 +8,12 @@ body, html {
   width: 100vw;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-}
-
-
-#guestFeedContainer {
-  margin: 103px auto;
-  font-size: 32px;
-  text-align: center;
-  height: 100%;
-  overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-  display:  none;
-}
-
-#table_scroll{
-  width:100%;
-  list-style-type: none;
-}
-
-#table_scroll tr {
-  height: 60px;
 }
 
 body {
   font-family: GreatVibes;
   background: #FFFFF2;
+  overflow: hidden;
 }
 
 .feather {
@@ -58,3 +36,34 @@ body {
   font-size: 60px;
   margin: 0;
 }
+
+
+#cam {
+  max-width: 700px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+#cam video {
+  width: 100%;
+  height: 100%;
+}
+
+.GuestScroller ul {
+  list-style-type: none;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  border: 1px solid green;
+}
+
+.GuestScroller ul > li {
+  font-weight: bold;
+  font-size: 36px;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid green;
+}
+
